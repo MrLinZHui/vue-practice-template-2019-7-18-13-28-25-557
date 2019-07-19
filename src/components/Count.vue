@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <button @click="increse()">+</button>
-    <input type="text" v-model="clumvalue">
-    <button @click="desc()">-</button>
+        <button @click="increse()">+</button>
+        <input type="text" v-model="clumvalue">
+        <button @click="desc()">-</button>
   </div>
 </template>
 

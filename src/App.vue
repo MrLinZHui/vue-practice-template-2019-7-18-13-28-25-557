@@ -1,22 +1,24 @@
 <template>
-  <!-- <div id="app">
-    <button @click="increse()">+</button>
-    <input type="text" v-model="clumvalue">
-    <button @click="desc()">-</button>
-  </div> -->
-  <div id="app">
-      <Count></Count>
+  <div id="app" >
+      <!--<input type="text" v-model="counterNum">-->
+      <CounterGroup></CounterGroup>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import Count from './components/Count.vue'
+import CounterGroup from './components/CounterGroup.vue'
 export default {
   name: 'app',
+  props: ['counterNum'],
+  data() {
+    return{
+     // counterNum: 0
+    }
+  },
   components: {
     HelloWorld,
-    Count
+    CounterGroup
   }
 }
 </script>
