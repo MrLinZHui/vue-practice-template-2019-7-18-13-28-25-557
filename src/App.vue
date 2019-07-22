@@ -1,24 +1,22 @@
 <template>
   <div id="app" >
       <!--<input type="text" v-model="counterNum">-->
-      <CounterGroup></CounterGroup>
+      <Count></Count>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import CounterGroup from './components/CounterGroup.vue'
+import Count from './components/Count.vue'
 export default {
   name: 'app',
-  props: ['counterNum'],
+ // props: ['counterNum'],
   data() {
     return{
      // counterNum: 0
     }
   },
   components: {
-    HelloWorld,
-    CounterGroup
+    Count
   }
 }
 </script>

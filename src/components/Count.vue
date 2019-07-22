@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-        <button @click="increse()">+</button>
-        <input type="text" v-model="clumvalue">
-        <button @click="desc()">-</button>
+        <button @click="increse(1)">+</button>
+        <input type="text" v-model="this.$store.state.count">
+        <button @click="increse(-1)">-</button>
   </div>
 </template>
 
@@ -11,16 +11,20 @@ export default {
   name: 'Count',
   data() {
     return{
-      clumvalue: 0
+     //clumvalue: this.$store.state.count
     }
   },
   methods:{
-    increse(){
-      this.clumvalue++;
-    },
-    desc(){
-      this.clumvalue--;
+    increse(data){
+      //this.clumvalue++;
+      //this.$store.state.count++;
+      this.$store.commit("getCount",data)
     }
-  }
+  //   desc(){
+  //     //this.clumvalue--;
+  //     this.$store.state.count--;
+  //   }
+  // }
+}
 }
 </script>
